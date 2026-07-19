@@ -8,8 +8,10 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/sushantojha2027",
   resume:
-    "https://drive.google.com/file/d/1ZGdRgoJga9QzSi7voOx34BtTN9Eo9mSL/view?usp=drivesdk",
-  linkedin: "https://www.linkedin.com/in/sushant-ojha-743809285/"
+    "https://drive.google.com/file/d/1-yTpzf557jfuGq86eDufp5iqhloi4_YG/view?usp=drivesdk",
+  linkedin: "https://www.linkedin.com/in/sushant-ojha-743809285/",
+  leetcode: "https://leetcode.com/u/ojhasushant/",
+  codechef: "https://www.codechef.com/users/sushantojhadlw"
 
 };
 
@@ -126,10 +128,10 @@ export const experiences = [
     img: "https://www.jobsgyan.in/wp-content/uploads/2022/03/BLW-Logo.png",
     role: "Railway Intern",
     company: "BANARAS LOCOMOTIVE WORKSHOP VARANASI",
-    date: "June 2025 - July 2025",
+    date: "June 2026 - July 2026",
     desc: "Gained Hand-On Experience with the IT infrastructure supporting one of the largest railway network.",
    
-    doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Screenshot%20from%202024-01-25%2022-38-31.png?alt=media&token=2785903f-1a4e-41f5-afd2-6adcfe56d058",
+    doc: "https://drive.google.com/file/d/1uDcgFT17O32ziehbG40AXn7gMKZhvomM/view?usp=drivesdk",
   },
  
 ];
@@ -140,13 +142,13 @@ export const education = [
     img: "https://tse2.mm.bing.net/th?id=OIP.MZZeqBiTDWIx7fKMibKVOgAAAA&pid=Api&P=0&h=180",
     school: "Maulana Azad National Institute Of Technology, Bhopal",
     date: "August 2023 - June 2027",
-    grade: "8.24 CGPA",
+    grade: "8.11 CGPA",
     desc: "I am currently pursuing a Bachelor's degree in Computer Science and Engineering at Maulana Azad National Institute Of Technology, Bhopal. I have completed 4 semesters and have a CGPA of 7.99.",
     degree: "Bachelor of Technology - BTech, Computer Science and Engineering",
   },
   {
     id: 1,
-    img: "https://tse1.mm.bing.net/th?id=OIP.5L0FNreAQVYK8z8vnd-sMwHaHa&pid=Api&P=0&h=180",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRddK3jxA0VIBdWTeQqbQX_BbG16_W_WKvEeJm9uD3P-w&s=10",
     school: "Glorious Academy, Lanka",
     date: "April 2021- April 2023",
     grade: "89.8%",
@@ -155,7 +157,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://tse4.mm.bing.net/th?id=OIP.l-AE2vLVgwnm9qzc0RqF4AHaHa&pid=Api&P=0&h=180",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnloQaC8cK-J6tfSOb2qLOiOsOrFs-ZNgppj9h5UAozg&s=10",
     school: "ST JOHN'S SCHOOL , BLW VARANASI",
     date: "April 2009 -  April 2021",
     grade: "96.5%",
@@ -167,20 +169,22 @@ export const education = [
 export const projects = [
   {
     id: 0,
-    title: "AI-CODE-REVIEWER",
+    title: "Sensai - AI Code Review Assistant",
     description:
-      "Developed an AI-powered-code review assistant leveraging Google-Gemini API key to analyze and provide real time suggestion for code-quality,optimization and bug detection.",
+      "An AI-powered code review assistant that helps developers improve their code quality by providing real-time feedback and suggestions. It uses advanced machine learning algorithms to analyze code and provide insights on best practices, potential bugs, and performance optimizations.",
     image:
-      "https://tse4.mm.bing.net/th?id=OIP.rxK7p6dF2oTjRwdIiyI_ggAAAA&pid=Api&P=0&h=180",
+      "https://i.ytimg.com/vi/UYnyIqbt4D4/maxresdefault.jpg",
     tags: [
-      "React Js",
-      "Express Js",
-      "Node Js",
-      "Gemini Api Key",
+      "NEXT JS",
+      "NODE JS",
+      "JWT AUTHENTICATION",
+      "GEMINI API",
       "Tailwind CSS",
+      "PRISMA DATABASE",
+      "SHADCN UI"
     ],
     category: "web app",
-    github: "https://github.com/sushantojha2027/code-reviewer-ai"
+    github: "https://github.com/sushantojha2027/Sensai-Your-AI-Career-Coach"
   },
   {
     id: 1,
@@ -188,7 +192,7 @@ export const projects = [
     description:
       "BLW Golf Club full-stack registration portal a web-based application to register, manage,and view golf club member details. This sys-tem includes a user dashboard, admin panel,authentication system, and course info dis-play, built using the MERN stack",
     image:
-      "https://tse4.mm.bing.net/th?id=OIP.HllOIvuNCU_8RYU5oB1r-wHaF-&pid=Api&P=0&h=180",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3lTDijEsdSCOja4CT3mTkWO-08c_eFOphgZlQCdrvVA&s=10",
     tags: [
       "ReactJs+Vite",
       "Node Js",
@@ -201,14 +205,14 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Weather ForeCasting App",
+    title: "HIRRD JOB PORTAL PLATFORM",
     description:
-      "Built a responsive weather app that displayreal-time weather data(sunset time,wind pres-sure,chance of rain,humidity present) for anylocation using API integratio",
+      "HIRRD is a job portal platform that connects job seekers with employers. It allows users to create profiles, upload resumes, and apply for jobs. Employers can post job listings, review applications, and manage their hiring process. The platform is built using the MERN stack and provides a seamless experience for both job seekers and employers.",
     image:
-      "https://webdamn.com/wp-content/uploads/2019/11/build-weather-website-with-php-min.png",
-    tags: ["React Js", "Javascript", "Html", "CSS", "Open Weather API"],
+      "https://www.sapphiresolutions.net/images/job_new_portfolio/job_portal_banner.svg",
+    tags: ["REACT JS,VITE,GEMINI API,CLERK,SHADCN"],
     category: "web app",
-    github: "https://github.com/sushantojha2027/Weather-app",
+    github: "https://github.com/sushantojha2027/hirrd",
   },
   
 ];

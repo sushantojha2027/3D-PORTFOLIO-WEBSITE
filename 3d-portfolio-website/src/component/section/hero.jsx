@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constant.jsx";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../image/HeroImage.jpg";
+import HeroImage from "/src/image/HeroImage.jpeg"
 import HeroBgAnimation from "../HeroBgAnimation";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
@@ -136,10 +136,10 @@ const ResumeButton = styled.a`
   appearance: button;
   text-decoration: none;
 
-  width: 95%;
-  max-width: 300px;
+  width: 60%;
+  max-width: 100px;
   text-align: center;
-  padding: 16px 0;
+  padding: 10px 0;
 
   background: hsla(271, 100%, 50%, 1);
   background: linear-gradient(
@@ -256,7 +256,7 @@ const Hero = () => {
             <HeroRightContainer>
               <motion.div {...headContentAnimation}>
                 <Tilt>
-                  <Img src={HeroImg} alt="Sushant Ojha" />
+                  <Img src={HeroImage} alt="Sushant Ojha" />
                 </Tilt>
               </motion.div>
             </HeroRightContainer>

@@ -24,11 +24,9 @@ const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1rem;
 `;
+
 const NavLogo = styled(LinkR)`
-  width: 80%;
-  padding: 0 6px;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
@@ -36,13 +34,12 @@ const NavLogo = styled(LinkR)`
 `;
 
 const NavItems = styled.ul`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 32px;
-  padding: 0 6px;
   list-style: none;
+  flex: 1;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -53,101 +50,76 @@ const NavLink = styled.a`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
 `;
 
 const ButtonContainer = styled.div`
-  width: 80%;
-  height: 100%;
   display: flex;
-  justify-content: end;
   align-items: center;
-  padding: 0 6px;
+  gap: 15px;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
-const GithubButton = styled.a`
+const SocialButton = styled.a`
   border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
-  justify-content: center;
   display: flex;
+  justify-content: center;
   align-items: center;
   border-radius: 20px;
   cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 18px;
+  font-size: 15px;
   font-weight: 500;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-decoration: none;
-  &:hover {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.text_primary};
-  }`;
 
-    const LinkedinButtun = styled.a`
-  border: 1px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
-  justify-content: center;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  transition: all 0.6s ease-in-out;
-  text-decoration: none;
-  margin-right: 110px;
   &:hover {
     background: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.text_primary};
-  };
+  }
 `;
 
 const MobileIcon = styled.div`
-  height: 100%;
-  display: flex;
-  align-items: center;
-  color: ${({ theme }) => theme.text_primary};
   display: none;
+  color: ${({ theme }) => theme.text_primary};
+
   @media screen and (max-width: 768px) {
     display: block;
   }
 `;
 
 const MobileMenu = styled.ul`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
   gap: 16px;
-  padding: 0 6px;
   list-style: none;
-  width: 100%;
-  padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
+  padding: 20px 40px;
+  background: ${({ theme }) => theme.card_light + "99"};
   position: absolute;
   top: 80px;
   right: 0;
-
+  width: 100%;
   transition: all 0.6s ease-in-out;
   transform: ${({ isOpen }) =>
     isOpen ? "translateY(0)" : "translateY(-100%)"};
+  opacity: ${({ isOpen }) => (isOpen ? 1 : 0)};
+  z-index: ${({ isOpen }) => (isOpen ? 1000 : -1000)};
   border-radius: 0 0 20px 20px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 `;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useTheme();
+
   return (
     <Nav>
       <NavbarContainer>
@@ -165,43 +137,51 @@ const Navbar = () => {
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#About">
+            <NavLink onClick={() => setIsOpen(false)} href="#About">
               About
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
+            <NavLink onClick={() => setIsOpen(false)} href="#Skills">
               Skills
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
+            <NavLink onClick={() => setIsOpen(false)} href="#Experience">
               Experience
             </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Education">
-              Education
-            </NavLink>
-            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
+            <NavLink onClick={() => setIsOpen(false)} href="#Projects">
               Projects
             </NavLink>
-            <GithubButton
+            <NavLink onClick={() => setIsOpen(false)} href="#Education">
+              Education
+            </NavLink>
+
+            <SocialButton
               href={Bio.github}
-              target="_Blank"
+              target="_blank"
               style={{
                 background: theme.primary,
                 color: theme.text_primary,
               }}
             >
-              Github Profile
-            </GithubButton>
+              GitHub
+            </SocialButton>
           </MobileMenu>
         )}
 
         <ButtonContainer>
-          <GithubButton href={Bio.github} target="_Blank">
-            Github Profile
-          </GithubButton>
-        </ButtonContainer>
-         <ButtonContainer>
-          <LinkedinButtun href={Bio.linkedin} target="_Blank">
-            Linkdin Profile
-          </LinkedinButtun>
+          <SocialButton href={Bio.github} target="_blank">
+            GitHub
+          </SocialButton>
+
+          <SocialButton href={Bio.linkedin} target="_blank">
+            LinkedIn
+          </SocialButton>
+
+          <SocialButton href={Bio.leetcode} target="_blank">
+            LeetCode
+          </SocialButton>
+
+          <SocialButton href={Bio.codechef} target="_blank">
+            CodeChef
+          </SocialButton>
         </ButtonContainer>
       </NavbarContainer>
     </Nav>
